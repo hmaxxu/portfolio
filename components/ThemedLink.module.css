@@ -1,0 +1,11 @@
+.themedLink {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  transition: text-decoration 0.3s ease-in-out;
+}
+
+.themedLink:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
