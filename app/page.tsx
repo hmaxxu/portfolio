@@ -1,3 +1,4 @@
+import { Cantarell } from 'next/font/google';
 import TwoColumnLayout from '../components/TwoColumnLayout';
 import ProjectCard from '../components/ProjectCard';
 
@@ -5,7 +6,7 @@ export default function Home() {
   const projects = [
     {
       title: "Plexi",
-      description: "The web is your oyster: Personalize, highlight, and master every word you see. A custom, persistent dictionary that scans the web, your complete control.",
+      description: "The web is your oyster: Personalize, highlight, and master every word you see. A custom, persistent dictionary that scans the web, under your complete control.",
       tags: ["Browser Plugin", "JavaScript", "Web Dev"],
       link: {
         href: "https://github.com/hmaxxu/plexi",
@@ -14,7 +15,7 @@ export default function Home() {
     },
     {
       title: "TikzEdit",
-      description: "Online TikZ editor, with LaTeX support. Create stunning vector graphics online in seconds, no install needed.",
+      description: "An online TikZ editor, with LaTeX support. Create stunning vector graphics online in seconds, no install needed.",
       tags: ["JavaScript", "Web Dev", "LaTeX"],
       link: {
         href: "https://github.com/hmaxxu/tikzedit",

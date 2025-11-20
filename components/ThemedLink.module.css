@@ -1,18 +1,13 @@
 .themedLink {
-  /* Layout */
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 1rem;
   position: relative;
   text-decoration: none;
-  
   color: var(--link-color, #3b82f6);
-  
   transition: background 0.3s ease, color 0.3s ease, border-right 0.3s ease;
-
   border-right: 6px solid var(--link-color, #3b82f6); 
-
   background: linear-gradient(
     to left,
     color-mix(in srgb, var(--link-color, #3b82f6), transparent 85%),
@@ -21,11 +16,30 @@
 }
 
 .themedLink:hover {
-  color: inherit;
-
+  color: inherit; 
   background: linear-gradient(
     to left,
     color-mix(in srgb, var(--link-color, #3b82f6), transparent 70%),
     transparent 100%
   );
+}
+
+@media (prefers-color-scheme: dark) {
+  .themedLink {
+    color: var(--link-color-dark, #60a5fa); 
+    border-right: 6px solid var(--link-color-dark, #60a5fa); 
+    background: linear-gradient(
+      to left,
+      color-mix(in srgb, var(--link-color-dark, #60a5fa), transparent 80%),
+      transparent 100%
+    );
+  }
+
+  .themedLink:hover {
+    background: linear-gradient(
+      to left,
+      color-mix(in srgb, var(--link-color-dark, #60a5fa), transparent 65%),
+      transparent 100%
+    );
+  }
 }
