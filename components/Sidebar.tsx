@@ -17,13 +17,13 @@ export default function Sidebar() {
       
       <ul className="text-right flex flex-col gap-2"> 
         <li>
-          <ThemedLink href="https://github.com" color="#501daf">
+          <ThemedLink href="https://github.com/maxhxu" color="#501daf" target="_blank" rel="noopener noreferrer">
             <FaGithub size={iconSize} className={iconClass} />
             GitHub
           </ThemedLink>
         </li>
         <li>
-          <ThemedLink href="https://linkedin.com" color="#0077b5">
+          <ThemedLink href="https://www.linkedin.com/in/hmaxxu/" color="#0077b5" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={iconSize} className={iconClass} />
             LinkedIn
           </ThemedLink>
