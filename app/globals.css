@@ -24,7 +24,3 @@ body {
   color: var(--foreground);
   font-family: Helvetica, Arial, sans-serif;
 }
-
-.themed-link {
-  display: block;
-}

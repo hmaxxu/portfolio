@@ -4,23 +4,27 @@ import ProjectCard from '../components/ProjectCard';
 export default function Home() {
   const projects = [
     {
-      title: "Personal Portfolio Site",
-      description: "A fast, modern portfolio built with Next.js, featuring responsive design and dark mode support for a great user experience.",
-      tags: ["Next.js", "React", "Tailwind CSS", "Design"],
+      title: "Plexi",
+      description: "The web is your oyster: Personalize, highlight, and master every word you see. A custom, persistent dictionary that scans the web, your complete control.",
+      tags: ["Browser Plugin", "JavaScript", "Web Dev"],
       link: {
-        href: "http://localhost:3000",
-        text: "Visit Live Site",
-      },
-    },
-    {
-      title: "Plexicon",
-      description: "The web is your oyster: Personalize, highlight, and master every word you see. A custom, persistent dictionary that scans all web content, completely under your control.",
-      tags: ["Plugin", "JavaScript", "Web Dev"],
-      link: {
-        href: "https://github.com/yourusername/chatbot-wrapper",
+        href: "https://github.com/hmaxxu/plexi",
         text: "View on GitHub",
       },
     },
+    {
+      title: "TikzEdit",
+      description: "Online TikZ editor, with LaTeX support. Create stunning vector graphics online in seconds, no install needed.",
+      tags: ["JavaScript", "Web Dev", "LaTeX"],
+      link: {
+        href: "https://github.com/hmaxxu/tikzedit",
+        text: "View on GitHub",
+      },
+      liveLink: {
+        href: "https://hmaxxu.github.io/tikzedit/",
+        text: "Live Site",
+      }
+    }
     // Add more projects here
   ];
 
@@ -35,11 +39,12 @@ export default function Home() {
       <div className="space-y-6">
         {projects.map((project, index) => (
           <ProjectCard
-            key={index} // List order is static; for now
+            key={index} // List order is static for now
             title={project.title}
             description={project.description}
             tags={project.tags}
             link={project.link}
+            liveLink={project.liveLink}
           />
         ))}
       </div>
