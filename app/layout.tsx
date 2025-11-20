@@ -17,7 +17,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    // Apply the class name here
     <html lang="en" className={cantarell.className}> 
       <body>{children}</body>
     </html>
