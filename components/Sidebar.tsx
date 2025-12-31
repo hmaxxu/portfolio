@@ -8,22 +8,13 @@ export default function Sidebar() {
   const iconClass = 'inline-block mr-2 align-middle';
   
   return (
-    <div className="
-      p-4 
-      bg-gray-100 dark:bg-gray-800 
-      h-full 
-      border-r border-gray-300 dark:border-gray-700
-      flex flex-col items-end text-right
-      text-gray-900 dark:text-gray-100 
-    ">
-      
-      <h1 className="text-3xl text-right font-bold mb-4">Max Xu</h1>
-
-      <p className="text-right mb-4">
+    <div className="p-8 pt-24 pb-12 flex flex-col items-end text-right text-gray-900 dark:text-gray-100">
+      <h1 className="text-3xl font-bold mb-4">Max Xu</h1>
+      <p className="mb-8 text-gray-600 dark:text-gray-400">
         CS + Math @ U of T 
       </p>
       
-      <ul className="text-right flex flex-col gap-2"> 
+      <ul className="flex flex-col gap-4">
         <li>
           <ThemedLink 
             href="https://github.com/maxhxu" 

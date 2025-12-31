@@ -5,6 +5,15 @@ import ProjectCard from '../components/ProjectCard';
 export default function Home() {
   const projects = [
     {
+      title: "Lectron",
+      description: "A streamlined LaTeX lecture notes manager built with Electron. Lectron bridges the gap between a .tex editor and an IDE, focusing specifically on project structure.",
+      tags: ["Electron", "Node.js", "TypeScript"],
+      link: {
+        href: "https://github.com/maxhxu/lectron",
+        text: "View on GitHub",
+      },
+    },
+    {
       title: "Plexi",
       description: "The web is your oyster: Personalize, highlight, and master every word you see. A custom, persistent dictionary that scans the web, under your complete control.",
       tags: ["Browser Plugin", "JavaScript", "Web Dev"],
@@ -30,25 +39,27 @@ export default function Home() {
   ];
 
   return (
-    <TwoColumnLayout>
-      <div className="mb-10 sm:block hidden">
-        {/* empty */}
-      </div>
-      <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">My Projects</h1>
+    <div className="h-screen overflow-y-auto overscroll-none">
+      <TwoColumnLayout>
+        <div className="mb-10 sm:block hidden">
+          {/* empty */}
+        </div>
+        <h1 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white">My Projects</h1>
 
-      {/* Map through the projects array to render a ProjectCard for each */}
-      <div className="space-y-6">
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={index} // List order is static for now
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            link={project.link}
-            liveLink={project.liveLink}
-          />
-        ))}
-      </div>
-    </TwoColumnLayout>
+        {/* Map through the projects array to render a ProjectCard for each */}
+        <div className="space-y-6">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index} // List order is static for now
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              link={project.link}
+              liveLink={project.liveLink}
+            />
+          ))}
+        </div>
+      </TwoColumnLayout>
+    </div>
   );
 }

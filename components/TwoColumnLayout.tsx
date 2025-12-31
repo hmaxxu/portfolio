@@ -7,42 +7,32 @@ interface TwoColumnLayoutProps {
 
 export default function TwoColumnLayout({ children }: TwoColumnLayoutProps) {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      
-      <div className="hidden md:block md:w-5/32 bg-gray-100 dark:bg-gray-800">
-        {/* empty */}
-      </div>
-      
-      <div className="
-        w-full 
-        md:w-3/16
-        md:sticky
-        md:top-0
-        md:h-screen 
-        md:flex md:flex-col
-      ">
-        
-        <div className="
-          hidden md:block md:h-1/8 
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-800 flex justify-center">
+      <div className="w-full max-w-[1440px] flex flex-col md:flex-row min-h-screen bg-white dark:bg-gray-900">
+        <aside className="
+          w-full md:w-1/3 lg:w-1/4
+          md:sticky md:top-0 md:h-screen
           bg-gray-100 dark:bg-gray-800 
-          border-r border-gray-300 dark:border-gray-700
+          border-r border-gray-300 dark:border-gray-700 
+          flex flex-col justify-center
         ">
-          {/* empty */}
-        </div>
-        
-        <div className="flex-grow">
           <Sidebar />
-        </div>
-      </div>
+        </aside>
 
-      <main className="
-        w-full
-        md:w-1/2
-        p-6
-      ">
-        {children}
-      </main>
-      
+        <main className="
+          flex-grow 
+          p-6 md:p-16 
+          bg-white dark:bg-gray-900 
+          border-r border-gray-300 dark:border-gray-700 
+          relative
+        ">
+          
+          <div className="relative z-10 max-w-3xl">
+            {children}
+          </div>
+        </main>
+        
+      </div>
     </div>
   );
 }
